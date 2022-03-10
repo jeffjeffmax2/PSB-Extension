@@ -15,7 +15,8 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "https://westmarkschool.learning.powerschool.com/*"
+    "https://westmarkschool.learning.powerschool.com/*",
+    "http://westmarkschool.learning.powerschool.com/*"
   ],
   "background": {
     "scripts": ["buttonFunction.js"],
@@ -24,6 +25,8 @@
   "content_scripts": [
     {
       "matches": ["https://westmarkschool.learning.powerschool.com/*"],
+      "matches": ["https://westmarkschool.learning.powerschool.com/*", "http://westmarkschool.learning.powerschool.com/*"],
+      "matches": ["http://westmarkschool.learning.powerschool.com/*"],
       "css": ["custom-styles.css"],
       "js": ["showShameMessage.js"],
       "run_at": "document_end"
